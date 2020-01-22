@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/login">
+    <fragment
+        android:id="@+id/login"
+        android:name="jl.elitek.notepadplus.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_jefeInicio"
+            app:destination="@id/jefeInicio"
+            app:popUpTo="@+id/login" />
+        <action
+            android:id="@+id/action_login_to_empleadoInicio"
+            app:destination="@id/empleadoInicio"
+            app:popUpTo="@+id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/jefeInicio"
+        android:name="jl.elitek.notepadplus.JefeInicio"
+        android:label="fragment_jefe_inicio"
+        tools:layout="@layout/fragment_jefe_inicio" >
+        <action
+            android:id="@+id/action_jefeInicio_to_crearProyecto"
+            app:destination="@id/crearProyecto"
+            app:popUpTo="@+id/crearProyecto" />
+        <argument
+            android:name="mensaje"
+            app:argType="string"
+            android:defaultValue="Hola Jefe" />
+    </fragment>
+    <fragment
+        android:id="@+id/empleadoInicio"
+        android:name="jl.elitek.notepadplus.EmpleadoInicio"
+        android:label="fragment_empleado_inicio"
+        tools:layout="@layout/fragment_empleado_inicio" >
+        <action
+            android:id="@+id/action_empleadoInicio_to_editarTarea"
+            app:destination="@id/editarTarea"
+            app:popUpTo="@+id/empleadoInicio" />
+    </fragment>
+    <fragment
+        android:id="@+id/crearProyecto"
+        android:name="jl.elitek.notepadplus.CrearProyecto"
+        android:label="fragment_crear_proyecto"
+        tools:layout="@layout/fragment_crear_proyecto" >
+        <action
+            android:id="@+id/action_crearProyecto_to_crearActividad"
+            app:destination="@id/crearActividad" />
+    </fragment>
+    <fragment
+        android:id="@+id/crearActividad"
+        android:name="jl.elitek.notepadplus.CrearActividad"
+        android:label="fragment_crear_actividad"
+        tools:layout="@layout/fragment_crear_actividad" >
+        <action
+            android:id="@+id/action_crearActividad_to_crearTarea"
+            app:destination="@+id/crearTarea" />
+    </fragment>
+    <fragment
+        android:id="@+id/crearTarea"
+        android:name="jl.elitek.notepadplus.CrearTarea"
+        android:label="fragment_crear_tarea"
+        tools:layout="@layout/fragment_crear_tarea" />
+    <fragment
+        android:id="@+id/editarTarea"
+        android:name="jl.elitek.notepadplus.EditarTarea"
+        android:label="fragment_editar_tarea"
+        tools:layout="@layout/fragment_editar_tarea" />
+</navigation>

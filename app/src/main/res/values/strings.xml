@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">NotePadPlus</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Pantalla de Login</string>
+    <string name="boton_inicio_sesion">Iniciar Sesión</string>
+    <string name="pantalla_inicio_jefe">Pantalla Inicio Jefe</string>
+    <string name="pantalla_inicio_empleado">Pantalla Inicio Empleado</string>
+</resources>
